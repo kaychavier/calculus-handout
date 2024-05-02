@@ -527,8 +527,10 @@ Para casa, um desafio: resolver o exercício abaixo.
 % -------------------- Derivada ------------------------
 
 \chapter{Derivadas} % 1V
-A derivada e uma função mensura a taxa de variação infinitesimal da mesma em um determinado ponto.
-\[f'(x) = \frac{df}{dx}\]
+\chapter{Derivadas} % 1V
+A derivada mensura a taxa de variação infinitesimal de uma função em um determinado ponto. No caso de uma função de uma variável, essa variação é a razão entre a saída e a entrada.
+\[\frac{df}{dx} = f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}\]
+
 
 \begin{exe}
     Considere uma função $y=f(x)$ com o gráfico.
@@ -541,6 +543,33 @@ Podemos então calcular o coeficiente angular da reta secante $m_s$ através do 
 \[\]
 
 \end{exe}
+
+%------------VER UM LUGAR PRA ISSO AQUI--------------
+
+\textbf{Função constante:} \(f(x) = K\), onde \(K \in \mathbb{R}\)
+\[f'(x) = lim_{x \to 0} \frac{f(x+h) - f(x)}{h} = \lim_{h \to 0} \frac{K - K}{h} = \lim_{h \to 0} 0 = 0\]
+
+\textbf{Função identidade:} \(f(x) = X\)
+
+\[f(x) = x\] 
+\[f(x + h) = x + h\]
+\[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim_{h \to 0} \frac{x + h - x}{h} = \lim_{h \to 0} \frac{h}{h} = 1\]
+
+\textbf{Função linear:} \(f(x) = ax + b\)
+
+\[f(x+h) = a(x + h) + b = ax + ah + b\]
+\[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} = \lim_{h \to 0} \frac{ax + ah + b - (ax + b)}{h}\]
+\[= \lim_{h \to 0} \frac{ax + ah + b - (ax + b)}{h} = \lim_{h \to 0} \frac{ah}{h} = \lim_{h \to 0} a = a\]
+
+\textbf{Parábolas:} \(f(x) = X^2\)
+
+\[f(x+h) = (x+h)^2 = x^2 + 2xh + h^2\]
+\[f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} = \lim_{h \to 0} \frac{x^2 + 2xh + h^2 - x^2}{h}\]
+\[= \lim_{h \to 0} \frac{2xh + h^2}{h} = \lim_{h \to 0} \frac{2xh}{h} + \frac{h^2}{h} = \lim_{h \to 0} 2x + h = 2x\]
+
+
+
+%------------ATÉ AQUI--------------
 
 \section{Derivadas Parciais} 
 \section{Derivabilidade} % 
