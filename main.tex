@@ -652,6 +652,7 @@ x & f(x) \\
     5, & \text{se } x \geq 7
 \end{cases}
 
+\begin{center}
 \begin{tikzpicture}[scale=0.8]
 % Eixos
 \draw[->] (-1,0) -- (9,0) node[right] {$x$};
@@ -672,6 +673,7 @@ x & f(x) \\
 \node[below] at (5,0) {$5$};
 \node[below] at (7,0) {$7$};
 \end{tikzpicture}
+\end{center}
 
 \[\lim_{x \to 5^-} f(x) = 3\] 
 \[\lim_{x \to 5^+} f(x) = 4\] 
@@ -712,13 +714,73 @@ Para Y como variável e X como constante:
 
 \end{exe}
 
-\section{Derivada Parcial de um ponto} 
+\section{Derivada parcial de um ponto} 
 \textbf{Definição:} Pode-se calcular a derivada parcial em um ponto qualquer, por exemplo:
 \[f(x, y) = xy\]
 \[\frac{\partial f}{\partial x} = y\]
 \[\frac{\partial f}{\partial x} = 7\]
 Ou seja, a variação da função \(f\) em relação ao eixo no ponto (1,7) é 7.
 
+\section{Curva de nível}
+\textbf{Definição:} Fixado um ponto para a saída de uma função \(f: \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}\) obtemos uma curva em 2D.
+
+\begin{exe}Fixe uma saída K, onde \(x^2 + y^2 = K\). As curvas de nível de \(f\) são infinitos círculos de diferentes raios.
+
+\[f(x, y) = x^2 + y^2\]
+
+Neste caso, fixando a saída em 1, temos:
+
+\[x^2 + y^2 = 1\]
+
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=$x$,
+    ylabel=$y$,
+    zlabel=$z$,
+    xmin=-1.5, xmax=1.5,
+    ymin=-1.5, ymax=1.5,
+    zmin=0, zmax=2,
+    axis lines=center,
+    view={30}{30}
+]
+\addplot3[
+    surf,
+    colormap={whiteblack}{color=(black) color=(white)},
+    domain=-1:1,
+    y domain=-1:1,
+    samples=20,
+]
+{x^2 + y^2};
+\addplot3 [only marks, mark=*] coordinates {(0, 0, 1)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+Plotando a curva de nível da função \(f(x, y) = x^2 + y^2\) no ponto z = 1:
+
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=$x$,
+    ylabel=$y$,
+    xmin=-2, xmax=2,
+    ymin=-2, ymax=2,
+    axis lines=center,
+    view={0}{90}
+]
+% Plot da curva x^2 + y^2 = 1
+\addplot [
+    domain=0:360,
+    samples=100,
+    color=blue,
+]
+({cos(x)}, {sin(x)});
+% Ponto (1, 0)
+\end{axis}
+\end{tikzpicture}
+    
+\end{exe}
 
 
 \section{Exercícios}
