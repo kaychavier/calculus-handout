@@ -685,6 +685,33 @@ Ou seja, \[ \exists \lim_{x \to 7} f(x)\]
 \noindent\textbf{Conclusão:} \( f \) é contínua em \(\mathbb{R} \{5, 7\}\) e descontínua em   \(\mathbb \{5, 7\}\).
 \end{exe}
 \section{Derivadas Parciais} % 2V - 3V 
+
+\textbf{Definição:} Seja \(f: \mathbb{R}^2 \rightarrow \mathbb{R}\), as derivadas parciais são dadas por: 
+\[f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}\]
+\[\frac{\partial f}{\partial x}(x, y) = \lim_{h \to 0} \frac{f(x+h, y) - f(x,y)}{h}\]
+\[\frac{\partial f}{\partial y}(x, y) = \lim_{h \to 0} \frac{f(x, y+h) - f(x,y)}{h}\]
+
+\begin{exe} \(f(x, y) =x^2 + y^2\)\\
+
+Para X como variável e Y como constante:
+
+\[\frac{\partial f}{\partial x}(x, y) = \lim_{h \to 0} \frac{f(x+h, y) - f(x, y)}{h} = \lim_{h \to 0} \frac{(x + h)^2 + y^2 - (x^2 + y^2)}{h}\]
+
+\[= \lim_{h \to 0} \frac{x^2 + 2xh + h^2 + y^2 - x^2 - y^2}{h} = \lim_{h \to 0} \frac{2xh + h^2}{h} = \lim_{h \to 0} \frac{2xh}{h} + \frac{h^2}{h}\]
+
+\[= \lim_{h \to 0} (2x + h) = 2x + 0 = 2x\]\\
+
+Para Y como variável e X como constante:
+
+\[\frac{\partial f}{\partial y}(x, y) = \lim_{h \to 0} \frac{f(x, y+h) - f(x, y)}{h} = \lim_{h \to 0} \frac{x^2 + (y + h)^2 - (x^2 + y^2)}{h}\]
+
+\[= \lim_{h \to 0} \frac{x^2 + y^2 + 2yh + h^2 - x^2 - y^2}{h} = \lim_{h \to 0} \frac{2yh + h^2}{h} = \lim_{h \to 0} \frac{2yh}{h} + \frac{h^2}{h}
+\]
+
+\[= 2y + h = 2y + 0 = 2y\]
+
+\end{exe}
+
 \section{Derivada Parcial de um ponto} 
 \textbf{Definição:} Pode-se calcular a derivada parcial em um ponto qualquer, por exemplo:
 \[f(x, y) = xy\]
